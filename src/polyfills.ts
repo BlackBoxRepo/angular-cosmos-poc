@@ -18,6 +18,8 @@
  * BROWSER POLYFILLS
  */
 
+// resolve.fallback: { "path": require.resolve("path-browserify") }
+
 /**
  * By default, zone.js will patch all possible macroTask and DomEvents
  * user can disable parts of macroTask/DomEvents patch by setting following flags
@@ -45,9 +47,13 @@
 /***************************************************************************************************
  * Zone JS is required by default for Angular itself.
  */
-import 'zone.js';  // Included with Angular CLI.
+import 'zone.js';
+import * as Buffer from 'buffer';  // Included with Angular CLI.
 
 
 /***************************************************************************************************
  * APPLICATION IMPORTS
  */
+
+(window as any).global = window;
+(window as any).Buffer = Buffer.Buffer;

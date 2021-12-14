@@ -20,6 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "allowedCommonJsDependencies": ["@cosmjs/crypto"],
             "outputPath": "dist/angular-cosmos-poc",
             "index": "src/index.html",
             "main": "src/main.ts",
